@@ -9,12 +9,12 @@ export function Hero() {
             <span>Available for work</span>
             <span className="pulse-dot h-1.5 w-1.5 rounded-full" style={{ backgroundColor: 'var(--nav)' }} />
           </div>
-          <div className="mt-4 grid grid-cols-1 items-center gap-6 md:grid-cols-[1fr_auto]">
+          <div className="mt-2 grid grid-cols-1 items-center gap-6 md:grid-cols-[1fr_auto]">
             <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl" style={{ color: 'var(--brand2)' }}>
               {content.profile.role}
             </h1>
-            <div className="justify-self-end md:mr-[-24px] octo-frame">
-              <img src="/avatar.png" alt="Avatar" className="octagon object-cover" style={{ width: '240px', height: '240px', objectPosition: 'center 60%' }} />
+            <div className="justify-self-end md:mr-[-200px] octo-frame">
+              <img src="/avatar.png" alt="Avatar" className="octagon object-cover w-36 h-36 sm:w-44 sm:h-44 md:w-[240px] md:h-[240px]" style={{ objectPosition: 'center 60%' }} />
             </div>
           </div>
           <p className="mt-4 text-lg text-black/70">{content.profile.bio}</p>
