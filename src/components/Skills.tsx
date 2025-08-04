@@ -3,7 +3,7 @@ import { Section } from './Section'
 
 export function Skills() {
   return (
-    <Section title="Skills" subtitle="Main technologies across frontend, backend, devops, and databases.">
+    <Section id="skills" title="Skills" subtitle="Main technologies across frontend, backend, devops, and databases.">
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {Object.entries(content.skills).map(([k, v]) => (
           <div key={k} className="card rounded-xl border p-7 md:p-8 backdrop-blur card-glow" style={{ borderColor: '#B79DC6', background: 'color-mix(in oklab, var(--nav) 4%, transparent)' }}>

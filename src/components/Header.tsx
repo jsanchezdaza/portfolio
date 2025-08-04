@@ -11,6 +11,7 @@ export function Header() {
           </span>
         </a>
         <nav className="nav-links flex items-center gap-5 text-base">
+          <a href="#skills" style={{ color: '#415E72' }}>Skills</a>
           <a href="#projects" style={{ color: '#415E72' }}>Projects</a>
           <a href="#experience" style={{ color: '#415E72' }}>Experience</a>
           <a href="#contact" style={{ color: '#415E72' }}>Contact</a>
