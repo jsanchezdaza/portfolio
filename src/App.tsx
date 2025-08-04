@@ -53,7 +53,9 @@ export default function App() {
                 <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl" style={{ color: 'var(--brand2)' }}>
                   {content.profile.role}
                 </h1>
-                <img src="https://dummyimage.com/160x160/6f4b84/ffffff.png&text=JS" alt="Avatar" className="justify-self-end rounded-xl object-cover" style={{ width: '160px', height: '160px', border: '4px solid #6f4b84' }} />
+                <div className="justify-self-end md:mr-[-24px] octo-frame">
+                  <img src="/avatar.png" alt="Avatar" className="octagon object-cover" style={{ width: '200px', height: '200px' }} />
+                </div>
               </div>
               <p className="mt-4 text-lg text-black/70">
                 {content.profile.bio}
