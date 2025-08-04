@@ -12,12 +12,13 @@ export default function App() {
       <Header />
 
       <div id="mobilePanel" className="mobile-panel" style={{ display: 'none' }}>
+        <a href="#skills" onClick={() => (document.getElementById('mobilePanel')!.style.display = 'none')}>Skills</a>
         <a href="#projects" onClick={() => (document.getElementById('mobilePanel')!.style.display = 'none')}>Projects</a>
         <a href="#experience" onClick={() => (document.getElementById('mobilePanel')!.style.display = 'none')}>Experience</a>
         <a href="#contact" onClick={() => (document.getElementById('mobilePanel')!.style.display = 'none')}>Contact</a>
       </div>
 
-      <main className="pt-20">
+      <main className="pt-10">
         <Hero />
         <Skills />
         <Projects />
