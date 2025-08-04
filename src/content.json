@@ -1,0 +1,69 @@
+{
+  "profile": {
+    "name": "Javier Sanchez Daza",
+    "role": "Full‑Stack Developer",
+    "location": "Remote / EU",
+    "bio": "Engineer building fast, accessible web apps and APIs."
+  },
+  "skills": {
+    "Frontend & Mobile": ["React", "React Native", "TypeScript", "Tailwind", "Expo"],
+    "Backend": ["Kotlin", "Java", "Node.js", "Ratpack", "RabbitMQ"],
+    "DevOps": ["Terraform", "Docker", "CI/CD", "AWS", "GitHub Actions"],
+    "Databases": ["PostgreSQL", "MySQL", "Flyway"]
+  },
+  "projects": [
+    {
+      "name": "TaskFlow",
+      "description": "Kanban PM tool with real‑time updates",
+      "tech": ["React", "Socket.IO", "PostgreSQL"],
+      "link": "https://example.com/taskflow",
+      "repo": "https://github.com/example/taskflow"
+    },
+    {
+      "name": "ShopLite",
+      "description": "Headless e‑commerce starter",
+      "tech": ["React", "Stripe", "NestJS"],
+      "link": "https://example.com/shoplite",
+      "repo": "https://github.com/example/shoplite"
+    },
+    {
+      "name": "Mapsio",
+      "description": "Fleet map with live telemetry",
+      "tech": ["React", "Leaflet", "WebSockets"],
+      "link": "https://example.com/mapsio",
+      "repo": "https://github.com/example/mapsio"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Product Minded Developer",
+      "company": "Cooltra",
+      "dates": "2019 - Present",
+      "bullets": [
+        "Participation in the entire product process, from discovery to implementation.",
+        "Backend API development in Kotlin for App and Backoffice.",
+        "Mobile development in React Native and Expo.",
+        "Web and backoffice development in React and Tailwind.",
+        "AWS management with Terraform."
+      ]
+    },
+    {
+      "role": "Java Software Developer",
+      "company": "Accenture",
+      "dates": "2019 - 2019 (10 months)",
+      "bullets": [
+        "Backend development in Java for banking solutions",
+        "Task automation with Blue Prism"
+      ]
+    }
+  ],
+  "contact": {
+    "email": "hello@javisan.dev",
+    "github": "https://github.com/jsanchezdaza",
+    "linkedin": "https://www.linkedin.com/in/javier-s%C3%A1nchez-daza-b0583a115/"
+  },
+  "theme": {
+    "mode": "dark",
+    "accent": "accent"
+  }
+}
