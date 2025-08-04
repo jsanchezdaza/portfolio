@@ -2,9 +2,10 @@ import { test, expect } from '@playwright/test'
 
 test('home loads and shows navbar links', async ({ page }) => {
   await page.goto('/')
-  await expect(page.getByText('Projects')).toBeVisible()
-  await expect(page.getByText('Experience')).toBeVisible()
-  await expect(page.getByText('Contact')).toBeVisible()
+  const nav = page.getByRole('navigation')
+  await expect(nav.getByRole('link', { name: 'Projects' })).toBeVisible()
+  await expect(nav.getByRole('link', { name: 'Experience' })).toBeVisible()
+  await expect(nav.getByRole('link', { name: 'Contact' })).toBeVisible()
 })
 
 test('scroll to skills', async ({ page }) => {
