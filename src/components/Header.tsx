@@ -16,10 +16,15 @@ export function Header() {
           <a href="#experience" style={{ color: '#415E72' }}>Experience</a>
           <a href="#contact" style={{ color: '#415E72' }}>Contact</a>
         </nav>
-        <button id="menuBtn" className="mobile-menu rounded-md border px-3 py-1.5 text-sm" style={{ borderColor: 'var(--nav)', color: '#415E72' }} onClick={() => {
+        <button id="menuBtn" className="mobile-menu text-sm" onClick={() => {
           const panel = document.getElementById('mobilePanel');
           if (panel) panel.style.display = panel.style.display === 'flex' ? 'none' : 'flex'
-        }}>Menu</button>
+        }} aria-label="Open menu">
+          <span style={{ position: 'relative', display: 'inline-block', width: '22px', height: '2px', background: 'black', borderRadius: '2px' }}>
+            <span style={{ position: 'absolute', left: 0, right: 0, top: '-6px', height: '2px', background: 'black', borderRadius: '2px' }} />
+            <span style={{ position: 'absolute', left: 0, right: 0, bottom: '-6px', height: '2px', background: 'black', borderRadius: '2px' }} />
+          </span>
+        </button>
       </header>
     </div>
   )
