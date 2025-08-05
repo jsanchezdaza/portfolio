@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 20
           cache: 'pnpm'
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm config set package-manager pnpm@10.11.1 && pnpm install --frozen-lockfile
       - run: pnpm ci
   e2e:
     runs-on: ubuntu-latest
@@ -34,6 +34,6 @@ jobs:
         with:
           node-version: 20
           cache: 'pnpm'
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm config set package-manager pnpm@10.11.1 && pnpm install --frozen-lockfile
       - run: npx playwright install --with-deps
       - run: pnpm test:e2e
