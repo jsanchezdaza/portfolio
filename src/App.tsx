@@ -18,7 +18,7 @@ export default function App() {
         <a href="#contact" onClick={() => (document.getElementById('mobilePanel')!.style.display = 'none')}>Contact</a>
       </div>
 
-      <main className="pt-10">
+      <main className="pt-6 md:pt-10">
         <Hero />
         <Skills />
         <Projects />
