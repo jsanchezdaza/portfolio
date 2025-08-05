@@ -19,7 +19,9 @@ export function Header() {
         <button id="menuBtn" className="mobile-menu text-sm" onClick={() => {
           const panel = document.getElementById('mobilePanel');
           if (panel) panel.style.display = panel.style.display === 'flex' ? 'none' : 'flex'
-        }}>Menu</button>
+        }} aria-label="Open menu">
+          <span style={{ display: 'inline-block', width: '22px', height: '2px', background: 'black', borderRadius: '2px', boxShadow: '0 6px 0 0 black, 0 -6px 0 0 black' }} />
+        </button>
       </header>
     </div>
   )
