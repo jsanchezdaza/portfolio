@@ -11,11 +11,12 @@ export default function App() {
     <div className="min-h-screen">
       <Header />
 
+      <div data-testid="backdrop" className="mobile-backdrop" onClick={() => (document.getElementById('mobilePanel')!.style.display = 'none')} />
       <div id="mobilePanel" className="mobile-panel" style={{ display: 'none' }}>
-        <a href="#skills" onClick={() => (document.getElementById('mobilePanel')!.style.display = 'none')}>Skills</a>
-        <a href="#projects" onClick={() => (document.getElementById('mobilePanel')!.style.display = 'none')}>Projects</a>
-        <a href="#experience" onClick={() => (document.getElementById('mobilePanel')!.style.display = 'none')}>Experience</a>
-        <a href="#contact" onClick={() => (document.getElementById('mobilePanel')!.style.display = 'none')}>Contact</a>
+        <a href="#skills" onClick={() => { const p = document.getElementById('mobilePanel')!; const b = document.querySelector('[data-testid="backdrop"]') as HTMLElement | null; p.style.display = 'none'; if (b) b.style.display = 'none';}}>Skills</a>
+        <a href="#projects" onClick={() => { const p = document.getElementById('mobilePanel')!; const b = document.querySelector('[data-testid="backdrop"]') as HTMLElement | null; p.style.display = 'none'; if (b) b.style.display = 'none';}}>Projects</a>
+        <a href="#experience" onClick={() => { const p = document.getElementById('mobilePanel')!; const b = document.querySelector('[data-testid="backdrop"]') as HTMLElement | null; p.style.display = 'none'; if (b) b.style.display = 'none';}}>Experience</a>
+        <a href="#contact" onClick={() => { const p = document.getElementById('mobilePanel')!; const b = document.querySelector('[data-testid="backdrop"]') as HTMLElement | null; p.style.display = 'none'; if (b) b.style.display = 'none';}}>Contact</a>
       </div>
 
       <main className="pt-6 md:pt-10">

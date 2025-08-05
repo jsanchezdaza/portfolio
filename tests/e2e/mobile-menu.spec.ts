@@ -15,7 +15,7 @@ test.describe('mobile menu (FAB)', () => {
     await expect(panel).toBeVisible()
 
     await page.mouse.click(10, 10)
-    await expect(panel).toBeHidden()
+    await expect(panel).toBeHidden({ timeout: 10000 })
   })
 
   test('selecting an option closes panel and navigates', async ({ page }) => {

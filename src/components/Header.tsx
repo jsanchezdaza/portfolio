@@ -18,20 +18,25 @@ export function Header() {
         </nav>
         <button id="menuBtn" className="mobile-menu text-sm" onClick={() => {
           const panel = document.getElementById('mobilePanel');
-          if (panel) {
-            const isOpen = panel.style.display === 'flex'
-            panel.style.display = isOpen ? 'none' : 'flex'
-            if (!isOpen) {
-              const onClick = (e: MouseEvent) => {
-                const btn = document.getElementById('menuBtn')
-                if (panel && !panel.contains(e.target as Node) && btn && !btn.contains(e.target as Node)) {
-                  panel.style.display = 'none'
-                  window.removeEventListener('click', onClick)
-                }
-              }
-              setTimeout(() => window.addEventListener('click', onClick), 0)
+          const backdrop = document.querySelector('[data-testid="backdrop"]') as HTMLElement | null
+          if (!panel) return
+          const isOpen = panel.style.display === 'flex'
+          if (isOpen) {
+            panel.style.display = 'none'
+            if (backdrop) backdrop.style.display = 'none'
+            return
+          }
+          panel.style.display = 'flex'
+          if (backdrop) backdrop.style.display = 'block'
+          const onDown = (e: MouseEvent) => {
+            const btn = document.getElementById('menuBtn')
+            if (panel && !panel.contains(e.target as Node) && btn && !btn.contains(e.target as Node)) {
+              panel.style.display = 'none'
+              if (backdrop) backdrop.style.display = 'none'
+              window.removeEventListener('mousedown', onDown)
             }
           }
+          window.addEventListener('mousedown', onDown, { once: true })
         }} aria-label="Open menu">
           <span style={{ position: 'relative', display: 'inline-block', width: '22px', height: '2px', background: 'black', borderRadius: '2px' }}>
             <span style={{ position: 'absolute', left: 0, right: 0, top: '-6px', height: '2px', background: 'black', borderRadius: '2px' }} />
