@@ -20,7 +20,10 @@ export function Header() {
           const panel = document.getElementById('mobilePanel');
           if (panel) panel.style.display = panel.style.display === 'flex' ? 'none' : 'flex'
         }} aria-label="Open menu">
-          <span style={{ display: 'inline-block', width: '22px', height: '2px', background: 'black', borderRadius: '2px', boxShadow: '0 6px 0 0 black, 0 -6px 0 0 black' }} />
+          <span style={{ position: 'relative', display: 'inline-block', width: '22px', height: '2px', background: 'black', borderRadius: '2px' }}>
+            <span style={{ position: 'absolute', left: 0, right: 0, top: '-6px', height: '2px', background: 'black', borderRadius: '2px' }} />
+            <span style={{ position: 'absolute', left: 0, right: 0, bottom: '-6px', height: '2px', background: 'black', borderRadius: '2px' }} />
+          </span>
         </button>
       </header>
     </div>
