@@ -27,3 +27,4 @@ CI/Preview
 
 Notes for agents
 - Use pnpm as package manager (packageManager field). Avoid adding new libs without approval. Respect eslint.config.js rulesets.
+- PR comments: include only a short Summary. Do NOT add Test plan or any boilerplate like “Generated with Crush”.
