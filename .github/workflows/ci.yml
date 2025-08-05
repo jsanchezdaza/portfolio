@@ -11,13 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.11.1
+      - run: corepack enable
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'pnpm'
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10.11.1
       - run: pnpm install --frozen-lockfile
       - run: pnpm ci
   e2e:
@@ -25,13 +26,14 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.11.1
+      - run: corepack enable
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'pnpm'
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10.11.1
       - run: pnpm install --frozen-lockfile
       - run: npx playwright install --with-deps
       - run: pnpm test:e2e
