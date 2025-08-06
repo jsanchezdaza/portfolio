@@ -1,51 +1,153 @@
 {
-  "profile": {
-    "name": "Javier Sanchez Daza",
-    "role": "Software Developer with Product Focus",
-    "location": "Remote / EU",
-    "bio": "Delivering value through a combination of product thinking, Lean principles, and Extreme Programming practices."
-  },
-  "skills": {
-    "Frontend & Mobile": ["React", "React Native", "TypeScript", "Tailwind", "Expo"],
-    "Backend": ["Kotlin", "Java", "Node.js", "Ratpack", "RabbitMQ"],
-    "DevOps": ["Terraform", "Docker", "CI/CD", "AWS", "GitHub Actions"],
-    "Databases": ["PostgreSQL", "MySQL", "Flyway"]
-  },
-  "projects": [
-    {
-      "name": "Connect 4",
-      "description": "Classic Connect Four game implementation",
-      "tech": ["React", "TypeScript", "CSS"],
-      "link": "https://games.javisan.dev/connect4"
-    }
-  ],
-  "experience": [
-    {
-      "role": "Product Minded Developer",
-      "company": "Cooltra",
-      "dates": "2019 - Present",
-      "bullets": [
-        "Participation in the entire product process, from discovery to implementation.",
-        "Backend API development in Kotlin for App and Backoffice.",
-        "Mobile development in React Native and Expo.",
-        "Web and backoffice development in React and Tailwind.",
-        "AWS management with Terraform."
+  "en": {
+    "profile": {
+      "name": "Javier Sanchez Daza",
+      "role": "Software Developer with Product Focus",
+      "location": "Remote / EU",
+      "bio": "Delivering value through a combination of product thinking, Lean principles, and Extreme Programming practices.",
+      "availableForWork": "Available for work"
+    },
+    "skills": {
+      "title": "Skills",
+      "subtitle": "Main technologies across frontend, backend, devops, and databases.",
+      "categories": {
+        "Frontend & Mobile": ["React", "React Native", "TypeScript", "Tailwind", "Expo"],
+        "Backend": ["Kotlin", "Java", "Node.js", "Ratpack", "RabbitMQ"],
+        "DevOps": ["Terraform", "Docker", "CI/CD", "AWS", "GitHub Actions"],
+        "Databases": ["PostgreSQL", "MySQL", "Flyway"]
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "subtitle": "Featured projects and applications I've built.",
+      "items": [
+        {
+          "name": "Connect 4",
+          "description": "Classic Connect Four game implementation",
+          "tech": ["React", "TypeScript", "CSS"],
+          "link": "https://games.javisan.dev/connect4"
+        }
       ]
     },
-    {
-      "role": "Java Software Developer",
-      "company": "Accenture",
-      "dates": "2019 - 2019 (10 months)",
-      "bullets": [
-        "Backend development in Java for banking solutions",
-        "Task automation with Blue Prism"
+    "experience": {
+      "title": "Experience",
+      "subtitle": "My professional journey and key accomplishments.",
+      "items": [
+        {
+          "role": "Product Minded Developer",
+          "company": "Cooltra",
+          "dates": "2019 - Present",
+          "bullets": [
+            "Participation in the entire product process, from discovery to implementation.",
+            "Backend API development in Kotlin for App and Backoffice.",
+            "Mobile development in React Native and Expo.",
+            "Web and backoffice development in React and Tailwind.",
+            "AWS management with Terraform."
+          ]
+        },
+        {
+          "role": "Java Software Developer",
+          "company": "Accenture",
+          "dates": "2019 - 2019 (10 months)",
+          "bullets": [
+            "Backend development in Java for banking solutions",
+            "Task automation with Blue Prism"
+          ]
+        }
       ]
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Let's build something together.",
+      "email": "hello@javisan.dev",
+      "github": "https://github.com/jsanchezdaza",
+      "linkedin": "https://www.linkedin.com/in/javier-s%C3%A1nchez-daza-b0583a115/"
+    },
+    "navigation": {
+      "skills": "Skills",
+      "projects": "Projects",
+      "experience": "Experience",
+      "contact": "Contact"
+    },
+    "buttons": {
+      "viewProjects": "View projects",
+      "getInTouch": "Get in touch"
     }
-  ],
-  "contact": {
-    "email": "hello@javisan.dev",
-    "github": "https://github.com/jsanchezdaza",
-    "linkedin": "https://www.linkedin.com/in/javier-s%C3%A1nchez-daza-b0583a115/"
+  },
+  "es": {
+    "profile": {
+      "name": "Javier Sanchez Daza",
+      "role": "Desarrollador de Software con enfoque en Producto",
+      "location": "Remoto / EU",
+      "bio": "Aportando valor mediante una combinación de pensamiento de producto, principios Lean y prácticas de Extreme Programming.",
+      "availableForWork": "Disponible para trabajar"
+    },
+    "skills": {
+      "title": "Habilidades",
+      "subtitle": "Principales tecnologías en frontend, backend, devops y bases de datos.",
+      "categories": {
+        "Frontend y Móvil": ["React", "React Native", "TypeScript", "Tailwind", "Expo"],
+        "Backend": ["Kotlin", "Java", "Node.js", "Ratpack", "RabbitMQ"],
+        "DevOps": ["Terraform", "Docker", "CI/CD", "AWS", "GitHub Actions"],
+        "Bases de Datos": ["PostgreSQL", "MySQL", "Flyway"]
+      }
+    },
+    "projects": {
+      "title": "Proyectos",
+      "subtitle": "Proyectos destacados y aplicaciones que he desarrollado.",
+      "items": [
+        {
+          "name": "Connect 4",
+          "description": "Implementación clásica del juego Conecta Cuatro",
+          "tech": ["React", "TypeScript", "CSS"],
+          "link": "https://games.javisan.dev/connect4"
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experiencia",
+      "subtitle": "Mi trayectoria profesional y logros principales.",
+      "items": [
+        {
+          "role": "Desarrollador con enfoque en Producto",
+          "company": "Cooltra",
+          "dates": "2019 - Presente",
+          "bullets": [
+            "Participación en todo el proceso de producto, desde el descubrimiento hasta la implementación.",
+            "Desarrollo de API backend en Kotlin para App y Backoffice.",
+            "Desarrollo móvil en React Native y Expo.",
+            "Desarrollo web y backoffice en React y Tailwind.",
+            "Gestión de AWS con Terraform."
+          ]
+        },
+        {
+          "role": "Desarrollador de Software Java",
+          "company": "Accenture",
+          "dates": "2019 - 2019 (10 meses)",
+          "bullets": [
+            "Desarrollo backend en Java para soluciones bancarias",
+            "Automatización de tareas con Blue Prism"
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contacto",
+      "subtitle": "Construyamos algo juntos.",
+      "email": "hello@javisan.dev",
+      "github": "https://github.com/jsanchezdaza",
+      "linkedin": "https://www.linkedin.com/in/javier-s%C3%A1nchez-daza-b0583a115/"
+    },
+    "navigation": {
+      "skills": "Habilidades",
+      "projects": "Proyectos",
+      "experience": "Experiencia",
+      "contact": "Contacto"
+    },
+    "buttons": {
+      "viewProjects": "Ver proyectos",
+      "getInTouch": "Contactar"
+    }
   },
   "theme": {
     "mode": "dark",

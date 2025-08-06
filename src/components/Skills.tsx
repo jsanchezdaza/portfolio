@@ -1,11 +1,13 @@
-import content from '../content.json'
+import { useLanguage } from '../contexts/LanguageContext'
 import { Section } from './Section'
 
 export function Skills() {
+  const { t } = useLanguage()
+
   return (
-    <Section id="skills" title="Skills" subtitle="Main technologies across frontend, backend, devops, and databases.">
+    <Section id="skills" title={t('skills.title')} subtitle={t('skills.subtitle')}>
       <div className="grid gap-2 md:gap-4 md:grid-cols-2 lg:grid-cols-4">
-        {Object.entries(content.skills).map(([k, v]) => (
+        {Object.entries(t('skills.categories')).map(([k, v]) => (
           <div key={k} className="card rounded-xl border p-4 md:p-8 backdrop-blur card-glow" style={{ borderColor: '#B79DC6', background: 'color-mix(in oklab, var(--nav) 4%, transparent)' }}>
             <div className="mb-2 md:mb-3 text-lg font-bold uppercase tracking-wide" style={{ color: '#415E72' }}>{k}</div>
             <div style={{ height: '2px', background: 'var(--nav)', width: '36px', borderRadius: '2px', marginBottom: '8px' }} />
