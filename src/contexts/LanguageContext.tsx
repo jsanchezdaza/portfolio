@@ -12,20 +12,10 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
-function detectBrowserLanguage(): Language {
-  const browserLang = navigator.language.toLowerCase()
-  if (browserLang.startsWith('es')) return 'es'
-  return 'en'
-}
-
 function getStoredLanguage(): Language {
   const stored = localStorage.getItem('portfolio-language') as Language
   if (stored && ['en', 'es'].includes(stored)) {
     return stored
-  }
-  // For production, detect browser language; for development/tests, default to English
-  if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
-    return detectBrowserLanguage()
   }
   return 'en'
 }
@@ -51,7 +41,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       value = value?.[k]
     }
     
-    // Fallback to English if value is not found
     if (value === undefined && language !== 'en') {
       let fallbackValue: any = content.en
       for (const k of keys) {
