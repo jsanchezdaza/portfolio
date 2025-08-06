@@ -13,25 +13,10 @@
   },
   "projects": [
     {
-      "name": "TaskFlow",
-      "description": "Kanban PM tool with real‑time updates",
-      "tech": ["React", "Socket.IO", "PostgreSQL"],
-      "link": "https://example.com/taskflow",
-      "repo": "https://github.com/example/taskflow"
-    },
-    {
-      "name": "ShopLite",
-      "description": "Headless e‑commerce starter",
-      "tech": ["React", "Stripe", "NestJS"],
-      "link": "https://example.com/shoplite",
-      "repo": "https://github.com/example/shoplite"
-    },
-    {
-      "name": "Mapsio",
-      "description": "Fleet map with live telemetry",
-      "tech": ["React", "Leaflet", "WebSockets"],
-      "link": "https://example.com/mapsio",
-      "repo": "https://github.com/example/mapsio"
+      "name": "Connect 4",
+      "description": "Classic Connect Four game implementation",
+      "tech": ["React", "TypeScript", "CSS"],
+      "link": "https://games.javisan.dev/connect4"
     }
   ],
   "experience": [
