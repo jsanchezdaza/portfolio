@@ -25,7 +25,7 @@
           "name": "Connect 4",
           "description": "Classic Connect Four game implementation",
           "tech": ["React", "TypeScript", "CSS"],
-          "link": "https://games.javisan.dev/connect4"
+          "link": "https://connect4.games.javisan.dev"
         }
       ]
     },
@@ -100,7 +100,7 @@
           "name": "Connect 4",
           "description": "Implementación clásica del juego Conecta Cuatro",
           "tech": ["React", "TypeScript", "CSS"],
-          "link": "https://games.javisan.dev/connect4"
+          "link": "https://connect4.games.javisan.dev"
         }
       ]
     },
