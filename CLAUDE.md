@@ -46,6 +46,7 @@ This is a personal portfolio website built with React + TypeScript + Vite, style
 - **Imports**: Group external then internal, prefer relative paths
 - **Styling**: TailwindCSS utilities, avoid inline styles unless dynamic
 - **Testing**: E2E tests with Playwright in `tests/e2e/`
+- **Commit Messages**: Do not include co-author credits or any mentions of AI tools in commit messages
 
 ## Key Files
 - `src/content.json`: All website content and configuration
