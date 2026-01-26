@@ -7,7 +7,7 @@ export function Projects() {
 
   return (
     <Section id="projects" title={t('projects.title')} subtitle={t('projects.subtitle')}>
-      <div className="grid gap-2.5 md:gap-6 md:grid-cols-2">
+      <div className="grid gap-2.5 md:gap-6 md:grid-cols-3">
         {t('projects.items').map((p: any) => (
           <a key={p.name} href={p.link} target="_blank" className="card rounded-xl border p-4 md:p-8 backdrop-blur transition-colors card-glow" style={{ borderColor: '#B79DC6', background: 'color-mix(in oklab, var(--nav) 4%, transparent)' }}>
             <div className="mb-2 md:mb-3">

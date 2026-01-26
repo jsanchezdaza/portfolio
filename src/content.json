@@ -28,6 +28,12 @@
           "link": "https://quest-forge.games.javisan.dev"
         },
         {
+          "name": "Tabily",
+          "description": "AI trip planner",
+          "tech": ["React", "TypeScript", "Tailwind CSS"],
+          "link": "https://tabily.javisan.dev/"
+        },
+        {
           "name": "Connect 4",
           "description": "Classic Connect Four game implementation",
           "tech": ["React", "TypeScript", "CSS"],
@@ -107,6 +113,12 @@
           "description": "RPG de texto con narrativa dinámica generada por IA",
           "tech": ["React", "TypeScript", "Tailwind CSS", "Supabase", "Playwright"],
           "link": "https://quest-forge.games.javisan.dev"
+        },
+        {
+          "name": "Tabily",
+          "description": "Planificador de viajes con IA",
+          "tech": ["React", "TypeScript", "Tailwind CSS"],
+          "link": "https://tabily.javisan.dev/"
         },
         {
           "name": "Connect 4",

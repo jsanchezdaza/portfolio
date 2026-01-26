@@ -18,8 +18,8 @@ export default function App() {
         <main className="pt-6 md:pt-10">
           <Hero />
           <Skills />
-          <Projects />
           <Experience />
+          <Projects />
           <Contact />
         </main>
 
