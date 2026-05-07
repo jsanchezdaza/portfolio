@@ -48,7 +48,7 @@
         {
           "role": "Software Engineer",
           "company": "Wallapop",
-          "dates": "2026 - Present",
+          "dates": "Apr 2026 - Present",
           "bullets": [
             "Backend development in Kotlin and Spring Boot."
           ]
@@ -56,7 +56,7 @@
         {
           "role": "Product Minded Developer",
           "company": "Cooltra",
-          "dates": "2019 - 2026",
+          "dates": "Nov 2019 - Apr 2026",
           "bullets": [
             "Participation in the entire product process, from discovery to implementation.",
             "Backend API development in Kotlin for App and Backoffice.",
@@ -68,7 +68,7 @@
         {
           "role": "Java Software Developer",
           "company": "Accenture",
-          "dates": "2019 - 2019 (10 months)",
+          "dates": "Feb 2019 - Nov 2019",
           "bullets": [
             "Backend development in Java for banking solutions",
             "Task automation with Blue Prism"
@@ -143,7 +143,7 @@
         {
           "role": "Software Engineer",
           "company": "Wallapop",
-          "dates": "2026 - Presente",
+          "dates": "Abr 2026 - Presente",
           "bullets": [
             "Desarrollo backend en Kotlin y Spring Boot."
           ]
@@ -151,7 +151,7 @@
         {
           "role": "Desarrollador con enfoque en Producto",
           "company": "Cooltra",
-          "dates": "2019 - 2026",
+          "dates": "Nov 2019 - Abr 2026",
           "bullets": [
             "Participación en todo el proceso de producto, desde el descubrimiento hasta la implementación.",
             "Desarrollo de API backend en Kotlin para App y Backoffice.",
@@ -163,7 +163,7 @@
         {
           "role": "Desarrollador de Software Java",
           "company": "Accenture",
-          "dates": "2019 - 2019 (10 meses)",
+          "dates": "Feb 2019 - Nov 2019",
           "bullets": [
             "Desarrollo backend en Java para soluciones bancarias",
             "Automatización de tareas con Blue Prism"
