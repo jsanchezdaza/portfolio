@@ -21,7 +21,9 @@ describe('LanguageSelector', () => {
 
   it('renders the language selector button', () => {
     renderWithProvider()
-    expect(screen.getByRole('button', { name: /select language/i })).toBeInTheDocument()
+    expect(
+      screen.getByRole('button', { name: /select language/i })
+    ).toBeInTheDocument()
   })
 
   it('shows current language flag', () => {

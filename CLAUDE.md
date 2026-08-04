@@ -19,21 +19,25 @@ This is a personal portfolio website built with React + TypeScript + Vite, style
 ## Architecture
 
 ### Content-Driven Approach
+
 - All content is centralized in `src/content.json` - profile info, skills, projects, experience, and contact details
 - Components import and render data from this JSON file
 - This pattern allows for easy content updates without touching component code
 
 ### Component Structure
+
 - `src/App.tsx`: Main app layout with mobile menu functionality
 - `src/components/`: All UI components (Header, Hero, Skills, Projects, Experience, Contact, Footer)
 - Each major section is a separate component that imports relevant data from `content.json`
 
 ### Mobile Menu Implementation
+
 - Uses vanilla DOM manipulation for mobile menu toggle
 - Global mousedown event listener for outside-click closing
 - Backdrop element with test-id for E2E testing
 
 ### Styling
+
 - TailwindCSS utility classes with custom CSS variables for theming
 - Responsive design with mobile-first approach
 - Dark theme implementation via CSS custom properties
@@ -49,6 +53,7 @@ This is a personal portfolio website built with React + TypeScript + Vite, style
 - **Commit Messages**: Do not include co-author credits or any mentions of AI tools in commit messages
 
 ## Key Files
+
 - `src/content.json`: All website content and configuration
 - `src/App.tsx`: Main layout with mobile menu logic
 - `src/components/Header.tsx`: Navigation with mobile menu button
@@ -56,4 +61,5 @@ This is a personal portfolio website built with React + TypeScript + Vite, style
 - `playwright.config.ts`: E2E test configuration targeting localhost:5173
 
 ## Before Committing
+
 Always run `pnpm lint` before making commits. The project uses ESLint v9 with flat config including React hooks rules and TypeScript support.

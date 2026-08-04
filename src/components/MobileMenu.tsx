@@ -5,19 +5,25 @@ export function MobileMenu() {
 
   const closeMobileMenu = () => {
     const panel = document.getElementById('mobilePanel')!
-    const backdrop = document.querySelector('[data-testid="backdrop"]') as HTMLElement | null
+    const backdrop = document.querySelector(
+      '[data-testid="backdrop"]'
+    ) as HTMLElement | null
     panel.style.display = 'none'
     if (backdrop) backdrop.style.display = 'none'
   }
 
   return (
     <>
-      <div 
-        data-testid="backdrop" 
-        className="mobile-backdrop" 
+      <div
+        data-testid="backdrop"
+        className="mobile-backdrop"
         onClick={closeMobileMenu}
       />
-      <div id="mobilePanel" className="mobile-panel" style={{ display: 'none' }}>
+      <div
+        id="mobilePanel"
+        className="mobile-panel"
+        style={{ display: 'none' }}
+      >
         <a href="#skills" onClick={closeMobileMenu}>
           {t('navigation.skills')}
         </a>
