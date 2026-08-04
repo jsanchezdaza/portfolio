@@ -8,10 +8,10 @@ export function LanguageSelector() {
 
   const languages = [
     { code: 'en' as Language, name: 'English', flag: '🇺🇸' },
-    { code: 'es' as Language, name: 'Español', flag: '🇪🇸' }
+    { code: 'es' as Language, name: 'Español', flag: '🇪🇸' },
   ]
 
-  const currentLang = languages.find(lang => lang.code === language)
+  const currentLang = languages.find((lang) => lang.code === language)
 
   return (
     <div className="relative">
@@ -22,24 +22,31 @@ export function LanguageSelector() {
         aria-label="Select language"
       >
         <span>{currentLang?.flag}</span>
-        <span className="hidden sm:inline">{currentLang?.code.toUpperCase()}</span>
-        <svg 
-          className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`} 
-          fill="none" 
-          stroke="currentColor" 
+        <span className="hidden sm:inline">
+          {currentLang?.code.toUpperCase()}
+        </span>
+        <svg
+          className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          fill="none"
+          stroke="currentColor"
           viewBox="0 0 24 24"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
         </svg>
       </button>
 
       {isOpen && (
         <>
-          <div 
-            className="fixed inset-0 z-10" 
+          <div
+            className="fixed inset-0 z-10"
             onClick={() => setIsOpen(false)}
           />
-          <div 
+          <div
             className="absolute right-0 top-full mt-1 py-1 bg-white border border-[#17313E]/10 rounded-md shadow-lg z-20 min-w-[120px]"
             style={{ backgroundColor: 'var(--nav)' }}
           >

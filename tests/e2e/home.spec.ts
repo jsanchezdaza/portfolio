@@ -20,3 +20,44 @@ test('projects cards visible', async ({ page }) => {
   const cards = page.locator('#projects .card')
   await expect(cards.first()).toBeVisible()
 })
+
+test('external links opened in a new tab isolate the opener', async ({
+  page,
+}) => {
+  await page.goto('/')
+  const externalLinks = page.locator('a[target="_blank"]')
+
+  await expect(externalLinks).not.toHaveCount(0)
+  const unsafeLinks = await externalLinks.evaluateAll((links) =>
+    links
+      .filter(
+        (link) => !/noreferrer|noopener/.test(link.getAttribute('rel') ?? '')
+      )
+      .map((link) => link.getAttribute('href'))
+  )
+
+  expect(unsafeLinks).toEqual([])
+})
+
+test('page exposes its primary content to assistive technology', async ({
+  page,
+}) => {
+  await page.goto('/')
+
+  await expect(page.getByRole('main')).toBeVisible()
+  await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1)
+  await expect(page.locator('img:not([alt])')).toHaveCount(0)
+
+  const unnamedButtons = await page
+    .getByRole('button')
+    .evaluateAll((buttons) =>
+      buttons
+        .filter(
+          (button) =>
+            !button.textContent?.trim() && !button.getAttribute('aria-label')
+        )
+        .map((button) => button.id || button.outerHTML)
+    )
+
+  expect(unnamedButtons).toEqual([])
+})

@@ -10,7 +10,9 @@ interface LanguageContextType {
   t: (key: string) => any
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined
+)
 
 function getStoredLanguage(): Language {
   const stored = localStorage.getItem('portfolio-language') as Language
@@ -36,11 +38,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const t = (key: string): any => {
     const keys = key.split('.')
     let value: any = content[language as keyof typeof content]
-    
+
     for (const k of keys) {
       value = value?.[k]
     }
-    
+
     if (value === undefined && language !== 'en') {
       let fallbackValue: any = content.en
       for (const k of keys) {
@@ -48,7 +50,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       }
       return fallbackValue
     }
-    
+
     return value || key
   }
 
