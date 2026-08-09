@@ -32,4 +32,4 @@ History follows Conventional Commit prefixes such as `feat:` and `fix:` with con
 
 ## Security & Configuration
 
-Do not commit secrets or personal tokens. Treat `src/content.json` and public assets as publicly deployable data. Keep deployment behavior in `vercel.json` and avoid committing generated `dist/`, test results, or local environment files.
+Treat `src/content.json` and public assets as publicly deployable data. Keep deployment behavior in `vercel.json` and avoid committing generated `dist/`, test results, or local environment files.
