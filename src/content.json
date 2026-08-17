@@ -2,9 +2,9 @@
   "en": {
     "profile": {
       "name": "Javier Sanchez Daza",
-      "role": "Software Developer with Product Focus",
+      "role": "Product-focused Software Engineer",
       "location": "Remote / EU",
-      "bio": "Delivering value through a combination of product thinking, Lean principles, and Extreme Programming practices."
+      "bio": "Building reliable products and AI-enabled systems through product thinking, Lean principles, and Extreme Programming practices."
     },
     "skills": {
       "title": "Skills",
@@ -106,9 +106,9 @@
   "es": {
     "profile": {
       "name": "Javier Sanchez Daza",
-      "role": "Desarrollador de Software con enfoque en Producto",
+      "role": "Ingeniero de Software con enfoque en Producto",
       "location": "Remoto / EU",
-      "bio": "Aportando valor mediante una combinación de pensamiento de producto, principios Lean y prácticas de Extreme Programming."
+      "bio": "Desarrollo productos fiables y sistemas potenciados por IA mediante pensamiento de producto, principios Lean y prácticas de Extreme Programming."
     },
     "skills": {
       "title": "Habilidades",
