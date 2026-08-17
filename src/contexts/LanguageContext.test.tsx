@@ -70,6 +70,17 @@ describe('LanguageContext', () => {
       expect(value).toBe('Javier Sanchez Daza')
     })
 
+    it('provides the English product and AI positioning', () => {
+      const { result } = renderHook(() => useLanguage(), { wrapper })
+
+      expect(result.current.t('profile.role')).toBe(
+        'Product-focused Software Engineer'
+      )
+      expect(result.current.t('profile.bio')).toBe(
+        'Building reliable products and AI-enabled systems through product thinking, Lean principles, and Extreme Programming practices.'
+      )
+    })
+
     it('retrieves nested keys with dot notation', () => {
       const { result } = renderHook(() => useLanguage(), { wrapper })
       const value = result.current.t('skills.title')
@@ -92,6 +103,21 @@ describe('LanguageContext', () => {
       const esValue = result.current.t('skills.title')
       expect(esValue).toBeDefined()
       expect(typeof esValue).toBe('string')
+    })
+
+    it('provides the Spanish product and AI positioning', () => {
+      const { result } = renderHook(() => useLanguage(), { wrapper })
+
+      act(() => {
+        result.current.setLanguage('es')
+      })
+
+      expect(result.current.t('profile.role')).toBe(
+        'Ingeniero de Software con enfoque en Producto'
+      )
+      expect(result.current.t('profile.bio')).toBe(
+        'Desarrollo productos fiables y sistemas potenciados por IA mediante pensamiento de producto, principios Lean y prácticas de Extreme Programming.'
+      )
     })
   })
 })
