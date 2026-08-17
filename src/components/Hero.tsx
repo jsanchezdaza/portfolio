@@ -7,16 +7,6 @@ export function Hero() {
     <section>
       <div className="container py-16 md:py-20 grid grid-cols-1 gap-6 md:grid-cols-[1fr_520px]">
         <div className="order-2 md:order-1 max-w-2xl">
-          <div
-            className="inline-flex items-center gap-2 rounded-full border border-[#17313E]/10 bg-black/5 px-2.5 py-0.5 text-[10px] leading-none mb-3"
-            style={{ color: 'var(--brand2)' }}
-          >
-            <span>{t('profile.availableForWork')}</span>
-            <span
-              className="pulse-dot h-1.5 w-1.5 rounded-full"
-              style={{ backgroundColor: 'var(--nav)' }}
-            />
-          </div>
           <div className="mt-0">
             <h1
               className="text-4xl font-extrabold tracking-tight md:text-5xl"
