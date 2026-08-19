@@ -81,6 +81,14 @@ describe('LanguageContext', () => {
       )
     })
 
+    it('invites English readers to discuss engineering, product, and AI', () => {
+      const { result } = renderHook(() => useLanguage(), { wrapper })
+
+      expect(result.current.t('contact.subtitle')).toBe(
+        "Let's talk about software engineering, product, and AI."
+      )
+    })
+
     it('retrieves nested keys with dot notation', () => {
       const { result } = renderHook(() => useLanguage(), { wrapper })
       const value = result.current.t('skills.title')
@@ -117,6 +125,18 @@ describe('LanguageContext', () => {
       )
       expect(result.current.t('profile.bio')).toBe(
         'Desarrollo productos fiables y sistemas potenciados por IA mediante pensamiento de producto, principios Lean y prácticas de Extreme Programming.'
+      )
+    })
+
+    it('invites Spanish readers to discuss engineering, product, and AI', () => {
+      const { result } = renderHook(() => useLanguage(), { wrapper })
+
+      act(() => {
+        result.current.setLanguage('es')
+      })
+
+      expect(result.current.t('contact.subtitle')).toBe(
+        'Hablemos de ingeniería de software, producto e IA.'
       )
     })
   })
