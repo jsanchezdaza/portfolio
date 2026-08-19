@@ -7,8 +7,8 @@ export function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false)
 
   const languages = [
-    { code: 'en' as Language, name: 'English', flag: '🇺🇸' },
-    { code: 'es' as Language, name: 'Español', flag: '🇪🇸' },
+    { code: 'en' as Language, name: 'English' },
+    { code: 'es' as Language, name: 'Español' },
   ]
 
   const currentLang = languages.find((lang) => lang.code === language)
@@ -22,10 +22,7 @@ export function LanguageSelector() {
         aria-label="Select language"
         aria-expanded={isOpen}
       >
-        <span>{currentLang?.flag}</span>
-        <span className="hidden sm:inline">
-          {currentLang?.code.toUpperCase()}
-        </span>
+        <span>{currentLang?.code.toUpperCase()}</span>
         <svg
           className={isOpen ? 'is-open' : ''}
           fill="none"
@@ -58,12 +55,12 @@ export function LanguageSelector() {
                   setLanguage(lang.code)
                   setIsOpen(false)
                 }}
+                aria-label={lang.name}
                 className={`language-option ${
                   language === lang.code ? 'is-active' : ''
                 }`}
               >
-                <span>{lang.flag}</span>
-                <span>{lang.name}</span>
+                <span>{lang.code.toUpperCase()}</span>
               </button>
             ))}
           </div>

@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, it, expect, beforeEach, vi } from 'vitest'
 import { LanguageSelector } from './LanguageSelector'
@@ -26,15 +26,22 @@ describe('LanguageSelector', () => {
     ).toBeInTheDocument()
   })
 
-  it('shows current language flag', () => {
+  it('shows only the current language code', () => {
     renderWithProvider()
-    expect(screen.getByText('🇺🇸')).toBeInTheDocument()
+    const trigger = screen.getByRole('button', { name: /select language/i })
+
+    expect(within(trigger).getByText('EN')).toBeInTheDocument()
+    expect(within(trigger).queryByText('🇺🇸')).not.toBeInTheDocument()
   })
 
   it('dropdown is closed by default', () => {
     renderWithProvider()
-    expect(screen.queryByText('English')).not.toBeInTheDocument()
-    expect(screen.queryByText('Español')).not.toBeInTheDocument()
+    expect(
+      screen.queryByRole('button', { name: 'English' })
+    ).not.toBeInTheDocument()
+    expect(
+      screen.queryByRole('button', { name: 'Español' })
+    ).not.toBeInTheDocument()
   })
 
   describe('when dropdown is opened', () => {
@@ -44,8 +51,13 @@ describe('LanguageSelector', () => {
 
       await user.click(screen.getByRole('button', { name: /select language/i }))
 
-      expect(screen.getByText('English')).toBeInTheDocument()
-      expect(screen.getByText('Español')).toBeInTheDocument()
+      const englishOption = screen.getByRole('button', { name: 'English' })
+      const spanishOption = screen.getByRole('button', { name: 'Español' })
+
+      expect(within(englishOption).getByText('EN')).toBeInTheDocument()
+      expect(within(spanishOption).getByText('ES')).toBeInTheDocument()
+      expect(screen.queryByText('🇺🇸')).not.toBeInTheDocument()
+      expect(screen.queryByText('🇪🇸')).not.toBeInTheDocument()
     })
 
     it('closes dropdown when clicking outside', async () => {
@@ -53,13 +65,17 @@ describe('LanguageSelector', () => {
       renderWithProvider()
 
       await user.click(screen.getByRole('button', { name: /select language/i }))
-      expect(screen.getByText('English')).toBeInTheDocument()
+      expect(
+        screen.getByRole('button', { name: 'English' })
+      ).toBeInTheDocument()
 
       await user.click(
         screen.getByRole('button', { name: /close language selector/i })
       )
 
-      expect(screen.queryByText('English')).not.toBeInTheDocument()
+      expect(
+        screen.queryByRole('button', { name: 'English' })
+      ).not.toBeInTheDocument()
     })
 
     it('closes dropdown after selecting a language', async () => {
@@ -67,9 +83,11 @@ describe('LanguageSelector', () => {
       renderWithProvider()
 
       await user.click(screen.getByRole('button', { name: /select language/i }))
-      await user.click(screen.getByText('Español'))
+      await user.click(screen.getByRole('button', { name: 'Español' }))
 
-      expect(screen.queryByText('English')).not.toBeInTheDocument()
+      expect(
+        screen.queryByRole('button', { name: 'English' })
+      ).not.toBeInTheDocument()
     })
   })
 
@@ -79,9 +97,10 @@ describe('LanguageSelector', () => {
       renderWithProvider()
 
       await user.click(screen.getByRole('button', { name: /select language/i }))
-      await user.click(screen.getByText('Español'))
+      await user.click(screen.getByRole('button', { name: 'Español' }))
 
-      expect(screen.getByText('🇪🇸')).toBeInTheDocument()
+      const trigger = screen.getByRole('button', { name: /select language/i })
+      expect(within(trigger).getByText('ES')).toBeInTheDocument()
     })
 
     it('persists language to localStorage', async () => {
@@ -89,7 +108,7 @@ describe('LanguageSelector', () => {
       renderWithProvider()
 
       await user.click(screen.getByRole('button', { name: /select language/i }))
-      await user.click(screen.getByText('Español'))
+      await user.click(screen.getByRole('button', { name: 'Español' }))
 
       expect(localStorageMock.setItem).toHaveBeenCalledWith(
         'portfolio-language',
