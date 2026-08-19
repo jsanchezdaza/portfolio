@@ -400,18 +400,6 @@ img {
     box-shadow 180ms ease,
     border-color 180ms ease;
 }
-.card::before {
-  position: absolute;
-  top: -70px;
-  right: -50px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: rgba(100, 226, 183, 0.13);
-  filter: blur(7px);
-  content: '';
-  pointer-events: none;
-}
 .card:hover {
   transform: translateY(-4px);
   border-color: rgba(213, 11, 139, 0.2);

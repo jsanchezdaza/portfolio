@@ -18,7 +18,6 @@
     "ci": "pnpm check && pnpm test:e2e"
   },
   "dependencies": {
-    "liquid-glass-web-react": "^0.1.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },
