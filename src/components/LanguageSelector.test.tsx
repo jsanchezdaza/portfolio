@@ -55,10 +55,9 @@ describe('LanguageSelector', () => {
       await user.click(screen.getByRole('button', { name: /select language/i }))
       expect(screen.getByText('English')).toBeInTheDocument()
 
-      const backdrop = document.querySelector('.fixed.inset-0')
-      if (backdrop) {
-        await user.click(backdrop)
-      }
+      await user.click(
+        screen.getByRole('button', { name: /close language selector/i })
+      )
 
       expect(screen.queryByText('English')).not.toBeInTheDocument()
     })

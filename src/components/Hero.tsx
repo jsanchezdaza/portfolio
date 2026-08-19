@@ -4,34 +4,22 @@ export function Hero() {
   const { t } = useLanguage()
 
   return (
-    <section>
-      <div className="container py-16 md:py-20 grid grid-cols-1 gap-6 md:grid-cols-[1fr_520px]">
-        <div className="order-2 md:order-1 max-w-2xl">
-          <div className="mt-0">
-            <h1
-              className="text-4xl font-extrabold tracking-tight md:text-5xl"
-              style={{ color: 'var(--brand2)' }}
-            >
-              {t('profile.role')}
-            </h1>
-          </div>
-          <p className="mt-4 text-lg text-black/70">{t('profile.bio')}</p>
-          <div className="mt-6 flex gap-3">
-            <a href="#projects" className="button-cta">
-              {t('buttons.viewProjects')} <span className="badge-arrow">→</span>
+    <section className="hero-section">
+      <div className="container hero-layout">
+        <div className="hero-copy">
+          <h1>
+            {t('profile.role')}
+            <span className="terminal-cursor" aria-hidden="true" />
+          </h1>
+          <p className="hero-bio">{t('profile.bio')}</p>
+          <div className="hero-actions">
+            <a href="#projects" className="button button-primary">
+              {t('buttons.viewProjects')} <span aria-hidden="true">→</span>
             </a>
-            <a href="#contact" className="button-pill">
+            <a href="#contact" className="button button-secondary">
               {t('buttons.getInTouch')}
             </a>
           </div>
-        </div>
-        <div className="order-1 md:order-2 justify-self-end md:mr-0 md:self-start octo-frame">
-          <img
-            src="/avatar.png"
-            alt="Avatar"
-            className="octagon object-cover w-36 h-36 sm:w-44 sm:h-44 md:w-[240px] md:h-[240px]"
-            style={{ objectPosition: 'center 60%' }}
-          />
         </div>
       </div>
     </section>

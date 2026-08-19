@@ -14,19 +14,20 @@ export function LanguageSelector() {
   const currentLang = languages.find((lang) => lang.code === language)
 
   return (
-    <div className="relative">
+    <div className="language-selector">
       <button
+        type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-2 py-1 text-sm rounded-md hover:bg-black/5 transition-colors"
-        style={{ color: '#415E72' }}
+        className="language-trigger"
         aria-label="Select language"
+        aria-expanded={isOpen}
       >
         <span>{currentLang?.flag}</span>
         <span className="hidden sm:inline">
           {currentLang?.code.toUpperCase()}
         </span>
         <svg
-          className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          className={isOpen ? 'is-open' : ''}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -42,25 +43,24 @@ export function LanguageSelector() {
 
       {isOpen && (
         <>
-          <div
-            className="fixed inset-0 z-10"
+          <button
+            type="button"
+            aria-label="Close language selector"
+            className="language-backdrop"
             onClick={() => setIsOpen(false)}
           />
-          <div
-            className="absolute right-0 top-full mt-1 py-1 bg-white border border-[#17313E]/10 rounded-md shadow-lg z-20 min-w-[120px]"
-            style={{ backgroundColor: 'var(--nav)' }}
-          >
+          <div className="language-menu glass-surface">
             {languages.map((lang) => (
               <button
+                type="button"
                 key={lang.code}
                 onClick={() => {
                   setLanguage(lang.code)
                   setIsOpen(false)
                 }}
-                className={`w-full flex items-center gap-2 px-3 py-2 text-sm text-left hover:bg-black/5 transition-colors ${
-                  language === lang.code ? 'font-medium' : ''
+                className={`language-option ${
+                  language === lang.code ? 'is-active' : ''
                 }`}
-                style={{ color: '#415E72' }}
               >
                 <span>{lang.flag}</span>
                 <span>{lang.name}</span>

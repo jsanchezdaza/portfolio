@@ -61,3 +61,48 @@ test('page exposes its primary content to assistive technology', async ({
 
   expect(unnamedButtons).toEqual([])
 })
+
+test('terminal cursor blinks', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'no-preference' })
+  await page.goto('/')
+
+  const cursor = page.locator('.terminal-cursor')
+  await expect(cursor).toHaveCSS('animation-name', 'cursor-blink')
+
+  const opacitySamples: number[] = []
+  for (let sample = 0; sample < 10; sample += 1) {
+    opacitySamples.push(
+      await cursor.evaluate((element) =>
+        Number.parseFloat(getComputedStyle(element).opacity)
+      )
+    )
+    await page.waitForTimeout(125)
+  }
+
+  expect(Math.max(...opacitySamples)).toBeGreaterThan(0.5)
+  expect(Math.min(...opacitySamples)).toBeLessThan(0.5)
+})
+
+test('terminal cursor respects reduced motion preferences', async ({
+  page,
+}) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await page.goto('/')
+
+  await expect(page.locator('.terminal-cursor')).toHaveCSS(
+    'animation-name',
+    'none'
+  )
+})
+
+test('terminal cursor has breathing room after the title', async ({ page }) => {
+  await page.goto('/')
+
+  const gap = await page
+    .locator('.terminal-cursor')
+    .evaluate((cursor) =>
+      Number.parseFloat(getComputedStyle(cursor).marginLeft)
+    )
+
+  expect(gap).toBeGreaterThanOrEqual(10)
+})

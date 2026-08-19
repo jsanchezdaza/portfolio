@@ -6,16 +6,14 @@ import { Projects } from './components/Projects'
 import { Experience } from './components/Experience'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
-import { MobileMenu } from './components/MobileMenu'
 
 export default function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen">
+      <div>
         <Header />
-        <MobileMenu />
 
-        <main className="pt-6 md:pt-10">
+        <main>
           <Hero />
           <Skills />
           <Experience />
